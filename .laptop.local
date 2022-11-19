@@ -1,0 +1,27 @@
+#!/bin/sh
+
+brew bundle --file=- <<EOF
+cask 'chromedriver'
+brew 'awscli'
+brew 'eksctl'
+brew 'geckodriver'
+brew 'gettext'
+brew 'git-gui'
+brew 'kops'
+brew 'node'
+brew 'postgis'
+EOF
+
+alias install_asdf_plugin=add_or_update_asdf_plugin
+add_or_update_asdf_plugin() {
+  local name="$1"
+  local url="$2"
+
+  if ! asdf plugin-list | grep -Fq "$name"; then
+    asdf plugin-add "$name" "$url"
+  else
+    asdf plugin-update "$name"
+  fi
+}
+
+add_or_update_asdf_plugin yarn
