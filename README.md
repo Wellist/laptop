@@ -32,7 +32,7 @@ curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/ma
 ```
 
 Review our customizations and thoughtbot's script (avoid running scripts you
-haven't read!):
+haven't read!) and remove their outdated `brew "postgresql@14"`:
 
 ```sh
 less .laptop.local

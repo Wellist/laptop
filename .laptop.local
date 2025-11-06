@@ -4,12 +4,14 @@ brew bundle --file=- <<EOF
 cask 'chromedriver'
 brew 'awscli'
 brew 'eksctl'
+brew 'gdal'
 brew 'geckodriver'
 brew 'gettext'
 brew 'git-gui'
 brew 'kops'
 brew 'node'
 brew 'postgis'
+brew 'postgresql@17'
 EOF
 
 alias install_asdf_plugin=add_or_update_asdf_plugin
